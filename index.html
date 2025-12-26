@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Simulador Estrutural de Foguete (MEF)</title>
+  <title>CFD Visual Didático</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>🚀 Simulador Estrutural de Foguete</h1>
-  <p class="subtitle">MEF 1D • Material: Aço</p>
+<div id="panel">
+  <label>Velocidade do Fluido</label>
+  <input type="range" id="velocity" min="0.5" max="3" step="0.1" value="1">
 
-  <div class="controls">
-    <label>
-      Velocidade:
-      <input type="range" id="speed" min="0" max="10" value="5">
-    </label>
+  <label>Densidade de Linhas</label>
+  <input type="range" id="density" min="10" max="80" value="40">
 
-    <label>
-      Carga (kg):
-      <input type="number" id="payload" value="100" min="0">
-    </label>
+  <select id="mode">
+    <option value="velocity">Mapa de Velocidade</option>
+    <option value="stream">Somente Linhas</option>
+  </select>
+</div>
 
-    <button onclick="simulateMEF()">Simular</button>
-  </div>
+<canvas id="canvas"></canvas>
 
-  <div class="simulation-area">
-    <div class="rocket-structure" id="rocket"></div>
-  </div>
-
-  <p id="status"></p>
-
-  <script src="script.js"></script>
+<script type="module" src="main.js"></script>
 </body>
 </html>
