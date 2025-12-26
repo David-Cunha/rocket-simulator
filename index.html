@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rocket Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚀 Simulador de Foguete</h1>
+
+<div class="controls">
+  <label>Velocidade:
+    <input type="range" id="speed" min="1" max="10" value="5">
+  </label>
+
+  <label>Carga (kg):
+    <input type="number" id="payload" value="20">
+  </label>
+
+  <button onclick="launch()">Lançar</button>
+</div>
+
+<div class="launch-area">
+  <div class="rocket" id="rocket">
+    <div class="nose"></div>
+    <div class="body"></div>
+    <div class="engine" id="engine"></div>
+  </div>
+</div>
+
+<p id="status"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
