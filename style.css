@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0e23;
+  color: white;
+  text-align: center;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.launch-area {
+  position: relative;
+  height: 400px;
+  border: 1px dashed #444;
+  overflow: hidden;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nose {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid white;
+}
+
+.body {
+  width: 40px;
+  height: 100px;
+  background: #ccc;
+}
+
+.engine {
+  width: 40px;
+  height: 20px;
+  background: orange;
+}
