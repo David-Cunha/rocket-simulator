@@ -1,44 +1,72 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #0b0e23;
-  color: white;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #0f1435, #060818);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
+h1 {
+  margin-top: 20px;
+}
+
+.subtitle {
+  color: #a0a6ff;
+  margin-bottom: 20px;
+}
+
 .controls {
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.launch-area {
-  position: relative;
-  height: 400px;
-  border: 1px dashed #444;
-  overflow: hidden;
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.rocket {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.controls input[type="number"] {
+  width: 80px;
 }
 
-.nose {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 30px solid white;
+button {
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
 }
 
-.body {
-  width: 40px;
-  height: 100px;
-  background: #ccc;
+.simulation-area {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.engine {
-  width: 40px;
-  height: 20px;
-  background: orange;
+.rocket-structure {
+  width: 70px;
+  height: 320px;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 2px solid #555;
+  border-radius: 6px;
+  background: #111;
+}
+
+.segment {
+  flex: 1;
+  border-top: 1px solid #222;
+  transition: background 0.2s;
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffda79;
 }
